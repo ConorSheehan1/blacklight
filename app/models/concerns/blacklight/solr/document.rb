@@ -18,7 +18,9 @@ require 'rsolr'
 module Blacklight::Solr::Document
   extend ActiveSupport::Concern
   include Blacklight::Document
-  require_relative 'document/more_like_this'
+  # require_relative 'document/more_like_this'
+
+  autoload :MoreLikeThis, 'blacklight/document/more_like_this'
 
   include Blacklight::Document::ActiveModelShim
   include Blacklight::Solr::Document::MoreLikeThis

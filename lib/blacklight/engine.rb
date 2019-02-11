@@ -17,6 +17,9 @@ module Blacklight
       #{config.root}/app/models/concerns
     )
 
+    
+    config.autoload_paths << File.expand_path("../document/schema_org", __FILE__)
+
     # This makes our rake tasks visible.
     rake_tasks do
       Dir.chdir(File.expand_path(File.join(File.dirname(__FILE__), '..'))) do

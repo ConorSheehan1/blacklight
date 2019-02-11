@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-require File.join(File.dirname(__FILE__), "lib/blacklight/version")
+# require File.join(File.dirname(__FILE__), "lib/blacklight/version")
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'blacklight/version'
 
 Gem::Specification.new do |s|
   s.name        = "blacklight"
